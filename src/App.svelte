@@ -2,4 +2,4 @@
 	import NavBar from "./Sections/Navbar.svelte"
 </script>
 
-<NavBar />
+<NavBar title="vCard Generator" />
