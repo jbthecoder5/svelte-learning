@@ -3,8 +3,8 @@
 
 	let disabled = true;
 
-	function keyPressed() {
-		disabled = false
+	function keyPressed(event) {
+		event.key === "Shift" ? "" : (disabled = false);
 	}
 
 	function resetClicked() {
@@ -19,5 +19,5 @@
 		<input type="text" placeholder="Please enter your name"
 		on:keydown={keyPressed} />
 	</label>
-	<button type="reset" {disabled} on:click={resetClicked}>Reset</button>
+	<button {disabled} on:click|preventDefault={resetClicked}>Reset</button>
 </form>
