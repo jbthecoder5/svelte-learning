@@ -1,4 +1,8 @@
 <script>
+	import {createEventDispatcher} from 'svelte';
+	const dispatch = createEventDispatcher();
+
+
     let disabled = true; 
 	let name = "";
 	let firstInput ="";
@@ -31,7 +35,11 @@
 		on:keydown={keyPressed} bind:value={name}
 		bind:this={firstInput} />
 	</label>
-	<button {disabled} on:click|preventDefault={resetClicked}>Reset</button>
+	<article>
+		<button {disabled} on:click|preventDefault={resetClicked}>Reset</button>
+		<button on:click|preventDefault={()=>dispatch('createQRCode', name);}>Create QR Code</button>
+	</article>
+	
 </form>
 
 
