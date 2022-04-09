@@ -1,3 +1,7 @@
+/* if you see this comment, then you have successfully git pulled
+the latest git push of this repo
+*/
+
 <script>
 	import {createEventDispatcher} from 'svelte';
 	const dispatch = createEventDispatcher();
