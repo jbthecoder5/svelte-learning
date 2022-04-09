@@ -6,7 +6,19 @@
 	let QRCode="";
 </script>
 
+<style>
+	main {
+		padding: 1rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+</style>
+
 <NavBar title="vCard Generator" />
-<Form />
-<VCard />
+
+<main>
+	<Form on:CreateQRCode={e=>{QRCode=e.detail;}} />
+
+	<VCard {QRCode} />
+</main>
 
