@@ -1,6 +1,4 @@
-/* if you see this comment, then you have successfully git pulled
-the latest git push of this repo
-*/
+
 
 <script>
 	import {createEventDispatcher} from 'svelte';
@@ -59,16 +57,14 @@ the latest git push of this repo
 		on:keydown={keyPressed} bind:value={name}
 		bind:this={firstInput} />
 	</label>
+
 	<article>
 		<button {disabled} on:click|preventDefault={resetClicked}>Reset</button>
 		<button 
 			on:click|preventDefault={()=> {
 				dispatch('createQRCode', name);
-				}}>Create QR Code
+				}}>
+				Create QR Code
 		</button>
 	</article>
-	
 </form>
-
-
-<section>{name}</section>
